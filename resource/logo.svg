@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="55%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f9a8d4"/>
+    </linearGradient>
+    <linearGradient id="heart" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <!-- 圆角方形底 -->
+  <rect x="6" y="6" width="116" height="116" rx="30" fill="url(#bg)"/>
+  <rect x="6" y="6" width="116" height="116" rx="30" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="2"/>
+  <!-- 中心爱心 -->
+  <g filter="url(#glow)">
+    <path d="M64 92 C40 74 28 63 28 50 C28 39 37 32 47 32 C54 32 60 36 64 42 C68 36 74 32 81 32 C91 32 100 39 100 50 C100 63 88 74 64 92 Z"
+          fill="url(#heart)"/>
+  </g>
+  <!-- 星光点缀 -->
+  <circle cx="30" cy="30" r="4" fill="#fff" opacity=".95"/>
+  <circle cx="99" cy="34" r="3" fill="#fef3c7" opacity=".95"/>
+  <circle cx="97" cy="96" r="3.5" fill="#fff" opacity=".9"/>
+  <path d="M34 96 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 z" fill="#fff" opacity=".9"/>
+</svg>

@@ -1,0 +1,5 @@
+# AI 智能伴侣 · 运行依赖
+# 设计原则：除下面 3 个外，其余全部用 Python 标准库实现（RAG/RSS/情绪/工具/AST 等均零依赖）
+streamlit>=1.30.0
+openai>=1.0.0
+Pillow>=9.0.0

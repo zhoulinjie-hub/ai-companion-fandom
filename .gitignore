@@ -1,0 +1,51 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# ===== 环境变量 / 密钥（最重要：API Key 绝不进仓库）=====
+.env
+.env.*
+*.key
+*.pem
+
+# ===== 运行时用户数据（隐私 + 会变化，不应进仓库）=====
+# 聊天会话记录
+sessions/*.json
+# 长期记忆 / 情感 / 主动陪伴状态
+memory/*.json
+emotion/*.json
+proactive/*.json
+# 粉丝陪伴数据（护照/动态/票务/推送状态/数据源）
+fandom_data/*.json
+# RAG 知识库索引
+rag/*.json
+# 用户上传的图片/个人资料
+resource/user.json
+resource/uploaded_*
+# 评测报告（运行时生成）
+evaluation/reports/*.json
+
+# 保留目录本身（git 需要占位文件），但忽略里面的运行数据
+!sessions/.gitkeep
+!memory/.gitkeep
+!emotion/.gitkeep
+!proactive/.gitkeep
+!fandom_data/.gitkeep
+!rag/.gitkeep
+!evaluation/reports/.gitkeep
+
+# ===== 截图脚本产生的临时文件 =====
+_dom.html
+_screenshot.py
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+*.log
